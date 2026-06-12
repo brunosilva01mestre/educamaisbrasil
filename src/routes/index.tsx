@@ -453,14 +453,14 @@ function Index() {
         <section className="bg-white py-16 px-4 text-center">
           <div className="max-w-lg mx-auto">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-8">
-              Conheça o <span style={{ color: "#009C3B" }}>Prof. Rafaela Tavares</span>
+              Conheça a <span style={{ color: "#009C3B" }}>Prof. Rafaela Tavares</span>
             </h2>
             <div
               className="w-40 h-40 mx-auto bg-gray-200 rounded-full border-[5px] p-1.5 mb-8 shadow-xl overflow-hidden relative"
               style={{ borderColor: "#009C3B" }}
             >
-              <div className="w-full h-full rounded-full bg-gray-300 overflow-hidden flex items-center justify-center text-6xl">
-                ⚽
+              <div className="w-full h-full rounded-full bg-gray-300 overflow-hidden flex items-center justify-center text-4xl font-bold text-gray-600">
+                Foto
               </div>
             </div>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-10">
