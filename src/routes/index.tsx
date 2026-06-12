@@ -1,16 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import {
-  ArrowDown,
-  Play,
-  Check,
-  CircleX,
-  Gift,
-  Star,
-  User,
-  ShieldCheck,
-  ChevronDown,
-} from "lucide-react";
+import { ArrowDown, Play, Check, CircleX, Gift, Star, User, ShieldCheck, ChevronDown } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,22 +8,19 @@ export const Route = createFileRoute("/")({
       { title: "+90 Dinâmicas da Copa do Mundo para Professores" },
       {
         name: "description",
-        content:
-          "+90 dinâmicas prontas que transformam a Copa do Mundo em aulas inesquecíveis para qualquer turma.",
+        content: "+90 dinâmicas prontas que transformam a Copa do Mundo em aulas inesquecíveis para qualquer turma.",
       },
       { property: "og:title", content: "+90 Dinâmicas da Copa do Mundo" },
       {
         property: "og:description",
-        content:
-          "Dinâmicas prontas, alinhadas à BNCC, para engajar Fundamental II e Ensino Médio.",
+        content: "Dinâmicas prontas, alinhadas à BNCC, para engajar Fundamental II e Ensino Médio.",
       },
     ],
   }),
   component: Index,
 });
 
-const ASSET_BASE =
-  "https://pixel-perfect-clone-28570.lovable.app/__l5e/assets-v1";
+const ASSET_BASE = "https://pixel-perfect-clone-28570.lovable.app/__l5e/assets-v1";
 
 const bonuses = [
   {
@@ -147,18 +134,12 @@ function Index() {
               <span className="text-xs sm:text-sm font-black uppercase opacity-90 tracking-wide">
                 Oferta Esquenta Copa
               </span>
-              <span className="text-xs sm:text-sm font-black uppercase tracking-wide">
-                Expira em:
-              </span>
+              <span className="text-xs sm:text-sm font-black uppercase tracking-wide">Expira em:</span>
             </div>
             <div className="flex items-center gap-1 font-black text-xl sm:text-2xl">
-              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">
-                06
-              </div>
+              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">06</div>
               <div className="text-gray-900 pb-1">:</div>
-              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">
-                59
-              </div>
+              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">59</div>
             </div>
           </div>
         </div>
@@ -235,18 +216,14 @@ function Index() {
           </div>
           <div className="max-w-md mx-auto mt-12 text-center">
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              Aproveite o maior evento do planeta para transformar suas aulas em experiências que os
-              alunos{" "}
-              <strong style={{ color: "#009C3B" }}>vibram e lembram</strong> — sem passar horas
-              planejando do zero.
+              Aproveite o maior evento do planeta para transformar suas aulas em experiências que os alunos{" "}
+              <strong style={{ color: "#009C3B" }}>vibram e lembram</strong> — sem passar horas planejando do zero.
             </p>
             <button
               className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none"
               style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
             >
-              <span className="text-lg sm:text-2xl drop-shadow-sm leading-tight">
-                QUERO MINHAS DINÂMICAS DA COPA
-              </span>
+              <span className="text-lg sm:text-2xl drop-shadow-sm leading-tight">QUERO MINHAS DINÂMICAS DA COPA</span>
             </button>
           </div>
         </section>
@@ -274,11 +251,8 @@ function Index() {
             <div className="mt-14">
               <h3 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Respira.</h3>
               <p className="text-gray-700 leading-relaxed text-lg">
-                Com <strong style={{ color: "#009C3B" }}>DINÂMICAS DA COPA PRONTAS</strong> você vai
-                fazer{" "}
-                <strong style={{ color: "#009C3B" }}>
-                  qualquer turma vibrar, participar e aprender de verdade
-                </strong>{" "}
+                Com <strong style={{ color: "#009C3B" }}>DINÂMICAS DA COPA PRONTAS</strong> você vai fazer{" "}
+                <strong style={{ color: "#009C3B" }}>qualquer turma vibrar, participar e aprender de verdade</strong>{" "}
                 com o clima da Seleção Brasileira,{" "}
                 <strong style={{ color: "#009C3B" }}>sem perder o controle da sala</strong>.
               </p>
@@ -305,16 +279,9 @@ function Index() {
                   className="bg-white rounded-2xl overflow-hidden flex flex-col h-full transition-all shadow-xl"
                   style={{ border: b.highlight ? "2px solid #FFD700" : "2px solid #E5E7EB" }}
                 >
-                  <img
-                    src={b.img}
-                    alt={b.title}
-                    loading="lazy"
-                    className="w-full h-auto object-contain"
-                  />
+                  <img src={b.img} alt={b.title} loading="lazy" className="w-full h-auto object-contain" />
                   <div className="p-6 flex flex-col flex-1 text-center items-center">
-                    <h3 className="font-black text-gray-900 text-lg leading-tight mb-3">
-                      {b.title}
-                    </h3>
+                    <h3 className="font-black text-gray-900 text-lg leading-tight mb-3">{b.title}</h3>
                     <p className="text-sm text-gray-500 leading-relaxed mb-4">{b.desc}</p>
                     <span className="text-red-500 line-through decoration-red-400 font-black text-lg mb-4">
                       VALOR: {b.price}
@@ -329,13 +296,10 @@ function Index() {
                 </div>
               ))}
             </div>
-            <div
-              className="mt-8 rounded-2xl px-6 py-6 text-center shadow-sm"
-              style={{ backgroundColor: "#1D6F42" }}
-            >
+            <div className="mt-8 rounded-2xl px-6 py-6 text-center shadow-sm" style={{ backgroundColor: "#1D6F42" }}>
               <p className="text-xl sm:text-2xl font-black leading-snug text-white">
-                Esses 5 bônus somam mais de <span style={{ color: "#FFD700" }}>R$255</span> — e você
-                leva <span style={{ color: "#FFD700" }}>TUDO de graça</span> no Plano Completo.
+                Esses 5 bônus somam mais de <span style={{ color: "#FFD700" }}>R$255</span> — e você leva{" "}
+                <span style={{ color: "#FFD700" }}>TUDO de graça</span> no Plano Completo.
               </p>
             </div>
           </div>
@@ -355,12 +319,8 @@ function Index() {
             <div className="space-y-10">
               {/* Basic */}
               <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm relative">
-                <h3 className="text-center text-xl font-black text-gray-900 uppercase mb-2">
-                  Plano Básico
-                </h3>
-                <p className="text-center text-gray-400 text-sm mb-6">
-                  Para quem quer testar o método
-                </p>
+                <h3 className="text-center text-xl font-black text-gray-900 uppercase mb-2">Plano Básico</h3>
+                <p className="text-center text-gray-400 text-sm mb-6">Para quem quer testar o método</p>
                 <div className="flex flex-col items-center mb-8">
                   <p className="text-gray-300 line-through text-sm">De R$ 97</p>
                   <div className="flex items-start text-gray-800 leading-none">
@@ -368,20 +328,12 @@ function Index() {
                     <span className="text-6xl font-black mx-1 tracking-tighter">9</span>
                     <span className="text-2xl font-bold mt-2">,90</span>
                   </div>
-                  <p className="text-xs text-gray-400 mt-2 font-medium uppercase">
-                    pagamento único
-                  </p>
+                  <p className="text-xs text-gray-400 mt-2 font-medium uppercase">pagamento único</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {basicFeatures.map((f) => (
-                    <li
-                      key={f}
-                      className="flex items-center text-sm text-gray-600 font-medium"
-                    >
-                      <div
-                        className="rounded-full p-0.5 mr-3 flex-shrink-0"
-                        style={{ backgroundColor: "#009C3B" }}
-                      >
+                    <li key={f} className="flex items-center text-sm text-gray-600 font-medium">
+                      <div className="rounded-full p-0.5 mr-3 flex-shrink-0" style={{ backgroundColor: "#009C3B" }}>
                         <Check className="text-white" size={12} strokeWidth={4} />
                       </div>
                       {f}
@@ -408,22 +360,14 @@ function Index() {
                   <Star size={16} fill="currentColor" /> Mais Escolhido
                 </div>
                 <div className="p-8">
-                  <h3
-                    className="text-center text-2xl font-black uppercase mb-2"
-                    style={{ color: "#009C3B" }}
-                  >
+                  <h3 className="text-center text-2xl font-black uppercase mb-2" style={{ color: "#009C3B" }}>
                     Plano Completo
                   </h3>
-                  <p className="text-center text-gray-400 text-sm mb-6">
-                    Para aproveitar a Copa ao máximo na sala
-                  </p>
+                  <p className="text-center text-gray-400 text-sm mb-6">Para aproveitar a Copa ao máximo na sala</p>
                   <div className="flex flex-col items-center mb-6">
                     <p className="text-gray-400 line-through text-sm">De R$ 197</p>
                     <p className="text-sm text-gray-500 font-bold">Por apenas</p>
-                    <div
-                      className="flex items-start leading-none my-2"
-                      style={{ color: "#009C3B" }}
-                    >
+                    <div className="flex items-start leading-none my-2" style={{ color: "#009C3B" }}>
                       <span className="text-lg font-bold mt-2">R$</span>
                       <span className="text-7xl font-black mx-1 tracking-tighter">27</span>
                       <span className="text-3xl font-bold mt-2">,00</span>
@@ -447,32 +391,17 @@ function Index() {
                       >
                         <Check className="text-white" size={14} strokeWidth={4} />
                       </div>
-                      <span
-                        className="text-base font-black leading-tight"
-                        style={{ color: "#009C3B" }}
-                      >
+                      <span className="text-base font-black leading-tight" style={{ color: "#009C3B" }}>
                         +90 Dinâmicas da Copa do Mundo:
                       </span>
                     </div>
                     <ul className="pl-8 space-y-2 mb-4 border-l-2 border-gray-100 ml-2.5">
-                      <li className="text-sm text-gray-600 font-medium">
-                        • História das Copas e do Hexa Brasileiro
-                      </li>
-                      <li className="text-sm text-gray-600 font-medium">
-                        • Geografia dos Países e Sedes
-                      </li>
-                      <li className="text-sm text-gray-600 font-medium">
-                        • Matemática com Estatísticas e Tabelas
-                      </li>
-                      <li className="text-sm text-gray-600 font-medium">
-                        • Português com Crônicas de Futebol
-                      </li>
-                      <li className="text-sm text-gray-600 font-medium">
-                        • Inglês com Vocabulário Esportivo
-                      </li>
-                      <li className="text-sm text-gray-600 font-medium">
-                        • Educação Física e Trabalho em Equipe
-                      </li>
+                      <li className="text-sm text-gray-600 font-medium">• História das Copas e do Hexa Brasileiro</li>
+                      <li className="text-sm text-gray-600 font-medium">• Geografia dos Países e Sedes</li>
+                      <li className="text-sm text-gray-600 font-medium">• Matemática com Estatísticas e Tabelas</li>
+                      <li className="text-sm text-gray-600 font-medium">• Português com Crônicas de Futebol</li>
+                      <li className="text-sm text-gray-600 font-medium">• Inglês com Vocabulário Esportivo</li>
+                      <li className="text-sm text-gray-600 font-medium">• Educação Física e Trabalho em Equipe</li>
                     </ul>
                     <div className="flex items-start">
                       <div className="bg-[#d946ef] rounded-full p-0.5 mr-3 mt-1 flex-shrink-0">
@@ -500,15 +429,8 @@ function Index() {
                       </li>
                     </ul>
                     {completeFeatures.map((f) => (
-                      <div
-                        key={f}
-                        className="flex items-center text-sm font-bold"
-                        style={{ color: "#009C3B" }}
-                      >
-                        <div
-                          className="rounded-full p-0.5 mr-3 flex-shrink-0"
-                          style={{ backgroundColor: "#009C3B" }}
-                        >
+                      <div key={f} className="flex items-center text-sm font-bold" style={{ color: "#009C3B" }}>
+                        <div className="rounded-full p-0.5 mr-3 flex-shrink-0" style={{ backgroundColor: "#009C3B" }}>
                           <User className="text-white" size={12} />
                         </div>
                         {f}
@@ -531,7 +453,7 @@ function Index() {
         <section className="bg-white py-16 px-4 text-center">
           <div className="max-w-lg mx-auto">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-8">
-              Conheça o <span style={{ color: "#009C3B" }}>Prof. Rafael Tavares</span>
+              Conheça o <span style={{ color: "#009C3B" }}>Prof. Rafaela Tavares</span>
             </h2>
             <div
               className="w-40 h-40 mx-auto bg-gray-200 rounded-full border-[5px] p-1.5 mb-8 shadow-xl overflow-hidden relative"
@@ -542,9 +464,10 @@ function Index() {
               </div>
             </div>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-10">
-              Professor e apaixonado por futebol, com mais de 15 anos em sala de aula. Desenvolveu o
-              método das Dinâmicas da Copa para ajudar educadores a transformarem o clima do Mundial
-              em aprendizado real, engajando até os alunos mais desinteressados.
+              Professora há mais de 15 anos, sempre acreditou que o futebol podia ser muito mais do que entretenimento.
+              Foi dentro de sala de aula, vendo seus alunos se transformarem durante a Copa, que surgiu a ideia de criar
+              as Dinâmicas da Copa — um método que usa o maior evento esportivo do mundo para despertar o interesse de
+              até os alunos mais difíceis de engajar.
             </p>
             <div className="flex flex-col gap-4 items-center">
               <div
@@ -572,12 +495,10 @@ function Index() {
             >
               <ShieldCheck size={40} />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-4">
-              Risco zero por 14 dias
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-4">Risco zero por 14 dias</h2>
             <p className="text-gray-600 text-base sm:text-lg mb-6 leading-relaxed">
-              Teste o material por 14 dias. Se não gostar ou não funcionar para suas turmas,
-              devolvemos 100% do seu dinheiro.
+              Teste o material por 14 dias. Se não gostar ou não funcionar para suas turmas, devolvemos 100% do seu
+              dinheiro.
             </p>
             <p className="text-sm text-gray-400 font-medium">Sem perguntas. Sem burocracia.</p>
           </div>
@@ -595,10 +516,7 @@ function Index() {
               {faqs.map((f, i) => {
                 const open = openFaq === i;
                 return (
-                  <div
-                    key={f.q}
-                    className="border border-gray-100 rounded-xl bg-white mb-3 shadow-sm overflow-hidden"
-                  >
+                  <div key={f.q} className="border border-gray-100 rounded-xl bg-white mb-3 shadow-sm overflow-hidden">
                     <button
                       onClick={() => setOpenFaq(open ? null : i)}
                       className="w-full px-6 py-5 text-left font-bold text-gray-800 text-base sm:text-lg flex justify-between items-center focus:outline-none"
@@ -631,13 +549,11 @@ function Index() {
                 className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none shadow-xl"
                 style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
               >
-                <span className="text-lg sm:text-2xl drop-shadow-sm leading-tight">
-                  QUERO MINHAS DINÂMICAS DA COPA
-                </span>
+                <span className="text-lg sm:text-2xl drop-shadow-sm leading-tight">QUERO MINHAS DINÂMICAS DA COPA</span>
               </button>
               <p className="text-center text-sm text-gray-400 mt-5 px-4 leading-normal font-medium">
-                Clique abaixo e tenha acesso imediato às dinâmicas que estão fazendo a Copa do Mundo
-                virar a melhor aula do ano.
+                Clique abaixo e tenha acesso imediato às dinâmicas que estão fazendo a Copa do Mundo virar a melhor aula
+                do ano.
               </p>
             </div>
           </div>
