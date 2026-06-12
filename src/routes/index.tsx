@@ -459,6 +459,42 @@ function Index() {
           </div>
         </section>
 
+        {/* Testimonials */}
+        <section className="py-14 px-4 bg-[#F8FAFC] overflow-hidden">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex justify-center mb-8">
+              <div className="bg-[#E0F2FE] text-[#0369A1] px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 shadow-sm animate-bounce">
+                👇 Mais de 1.350 professores de humanas aprovam
+              </div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-8 leading-tight">
+              Veja o Que Professores Estão <br />
+              Dizendo
+            </h2>
+            <div className="relative w-full group">
+              <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 py-8 px-4 no-scrollbar items-center" style={{ scrollbarWidth: 'none' }}>
+                {Array.from({ length: 21 }).map((_, i) => {
+                  const imgIndex = i % 7;
+                  const rotate = i % 2 === 0 ? "rotate-1" : "-rotate-1";
+                  return (
+                    <div key={i} className="min-w-[280px] max-w-[320px] sm:min-w-[350px] sm:max-w-[400px] snap-center flex-shrink-0 transition-all duration-300">
+                      <div className={`bg-white p-2 rounded-2xl shadow-xl border border-gray-100 transform transition-transform duration-300 hover:scale-[1.02] hover:rotate-0 hover:z-10 ${rotate}`}>
+                        <img className="w-full h-auto rounded-xl object-contain bg-gray-50 opacity-90 grayscale-[0.2]" alt={`Prova social ${imgIndex + 1}`} loading="lazy" src={socialProofImages[imgIndex]} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <p className="text-center text-sm text-gray-400 mt-6 flex justify-center items-center font-medium animate-pulse">
+              arraste para o lado
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down rotate-[-90deg] ml-2" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </p>
+          </div>
+        </section>
+
         {/* About */}
         <section className="bg-white py-16 px-4 text-center">
           <div className="max-w-lg mx-auto">
