@@ -117,6 +117,16 @@ const faqs = [
   },
 ];
 
+const socialProofImages = [
+  "https://i.imgur.com/lvbYyBo.png",
+  "https://i.imgur.com/MZXPUIJ.png",
+  "https://i.imgur.com/1ziwqMb.png",
+  "https://i.imgur.com/vQluWA2.png",
+  "https://i.imgur.com/QDw8l48.png",
+  "https://i.imgur.com/vc533Pg.png",
+  "https://i.imgur.com/rO65l3b.png",
+];
+
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
