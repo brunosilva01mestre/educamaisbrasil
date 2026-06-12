@@ -93,7 +93,7 @@ const completeFeatures = [
 const faqs = [
   {
     q: "Para quais séries serve?",
-    a: "O material é adaptável para turmas do 6º ano do Ensino Fundamental até o 3º ano do Ensino Médio.",
+    a: "O material é adaptável para turmas do fundamental 2 ano do Ensino Fundamental até o 3º ano do Ensino Médio.",
   },
   {
     q: "Funciona em escola pública e privada?",
