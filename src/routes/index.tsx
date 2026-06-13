@@ -363,6 +363,7 @@ function Index() {
                   ))}
                 </ul>
                 <button
+                  onClick={goToCheckout}
                   className="w-full border-2 font-black py-4 rounded-xl hover:bg-green-50 transition-colors uppercase text-base tracking-wide"
                   style={{ borderColor: "#009C3B", color: "#009C3B" }}
                 >
@@ -460,6 +461,7 @@ function Index() {
                     ))}
                   </div>
                   <button
+                    onClick={goToCheckout}
                     className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none text-lg"
                     style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
                   >
@@ -606,6 +608,7 @@ function Index() {
             </div>
             <div className="mt-14">
               <button
+                onClick={scrollToPricing}
                 className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none shadow-xl"
                 style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
               >
