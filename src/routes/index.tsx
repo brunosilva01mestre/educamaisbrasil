@@ -375,7 +375,9 @@ function Index() {
 
               {/* Complete */}
               <div
+                id="plano-completo"
                 className="rounded-3xl border-2 shadow-2xl overflow-hidden relative transform scale-105 sm:scale-100 z-10"
+
                 style={{ backgroundColor: "#F0FDF4", borderColor: "#009C3B" }}
               >
                 <div
