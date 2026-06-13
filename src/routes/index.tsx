@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowDown, Play, Check, CircleX, Gift, Star, User, ShieldCheck, ChevronDown } from "lucide-react";
+import rafaelaAsset from "@/assets/rafaela.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -240,6 +241,7 @@ function Index() {
               <strong style={{ color: "#009C3B" }}>vibram e lembram</strong> — sem passar horas planejando do zero.
             </p>
             <button
+              onClick={scrollToPricing}
               className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none"
               style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
             >
@@ -361,6 +363,7 @@ function Index() {
                   ))}
                 </ul>
                 <button
+                  onClick={goToCheckout}
                   className="w-full border-2 font-black py-4 rounded-xl hover:bg-green-50 transition-colors uppercase text-base tracking-wide"
                   style={{ borderColor: "#009C3B", color: "#009C3B" }}
                 >
@@ -458,6 +461,7 @@ function Index() {
                     ))}
                   </div>
                   <button
+                    onClick={goToCheckout}
                     className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none text-lg"
                     style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
                   >
@@ -515,9 +519,11 @@ function Index() {
               className="w-40 h-40 mx-auto bg-gray-200 rounded-full border-[5px] p-1.5 mb-8 shadow-xl overflow-hidden relative"
               style={{ borderColor: "#009C3B" }}
             >
-              <div className="w-full h-full rounded-full bg-gray-300 overflow-hidden flex items-center justify-center text-4xl font-bold text-gray-600">
-                Foto
-              </div>
+              <img
+                src={rafaelaAsset.url}
+                alt="Prof. Rafaela Tavares"
+                className="w-full h-full rounded-full object-cover"
+              />
             </div>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-10">
               Professora há mais de 15 anos, sempre acreditou que o futebol podia ser muito mais do que entretenimento.
@@ -602,6 +608,7 @@ function Index() {
             </div>
             <div className="mt-14">
               <button
+                onClick={scrollToPricing}
                 className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none shadow-xl"
                 style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
               >
