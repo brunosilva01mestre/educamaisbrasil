@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     q: "É digital ou físico?",
-    a: "O material é 100% digital (PDFs), com entrega imediata via e-mail.",
+    a: "O material é 100% digital são projetos salvos no canva editáveis e PDFs prontos para ser impressos, com entrega imediata via WhastApp e\u00a0 e-mail.",
   },
   {
     q: "Posso usar em mais de uma turma?",
