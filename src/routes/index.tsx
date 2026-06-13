@@ -189,9 +189,10 @@ function Index() {
               <span className="text-xs sm:text-sm font-black uppercase tracking-wide">Expira em:</span>
             </div>
             <div className="flex items-center gap-1 font-black text-xl sm:text-2xl">
-              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">06</div>
+              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">{mm}</div>
               <div className="text-gray-900 pb-1">:</div>
-              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">59</div>
+              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">{ss}</div>
+
             </div>
           </div>
         </div>
