@@ -516,9 +516,11 @@ function Index() {
               className="w-40 h-40 mx-auto bg-gray-200 rounded-full border-[5px] p-1.5 mb-8 shadow-xl overflow-hidden relative"
               style={{ borderColor: "#009C3B" }}
             >
-              <div className="w-full h-full rounded-full bg-gray-300 overflow-hidden flex items-center justify-center text-4xl font-bold text-gray-600">
-                Foto
-              </div>
+              <img
+                src={rafaelaAsset.url}
+                alt="Prof. Rafaela Tavares"
+                className="w-full h-full rounded-full object-cover"
+              />
             </div>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-10">
               Professora há mais de 15 anos, sempre acreditou que o futebol podia ser muito mais do que entretenimento.
