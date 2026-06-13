@@ -243,7 +243,7 @@ function Index() {
               <strong style={{ color: "#009C3B" }}>vibram e lembram</strong> — sem passar horas planejando do zero.
             </p>
             <button
-              onClick={scrollToPricing}
+              onClick={scrollToCompletePlan}
               className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none"
               style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
             >
@@ -610,7 +610,7 @@ function Index() {
             </div>
             <div className="mt-14">
               <button
-                onClick={scrollToPricing}
+                onClick={scrollToCompletePlan}
                 className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none shadow-xl"
                 style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
               >
