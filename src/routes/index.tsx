@@ -142,6 +142,35 @@ const goToCheckout = () => {
 
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [secondsLeft, setSecondsLeft] = useState(7 * 60);
+
+  useEffect(() => {
+    // Load Wistia scripts
+    const s1 = document.createElement("script");
+    s1.src = "https://fast.wistia.com/player.js";
+    s1.async = true;
+    document.body.appendChild(s1);
+    const s2 = document.createElement("script");
+    s2.src = "https://fast.wistia.com/embed/qhuvu6g5iv.js";
+    s2.async = true;
+    s2.type = "module";
+    document.body.appendChild(s2);
+    return () => {
+      s1.remove();
+      s2.remove();
+    };
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setSecondsLeft((s) => (s > 0 ? s - 1 : 0));
+    }, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
+  const ss = String(secondsLeft % 60).padStart(2, "0");
+
 
   return (
     <div className="min-h-screen">
