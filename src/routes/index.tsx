@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowDown, Play, Check, CircleX, Gift, Star, User, ShieldCheck, ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowDown, Check, CircleX, Gift, Star, User, ShieldCheck, ChevronDown } from "lucide-react";
 import rafaelaAsset from "@/assets/rafaela.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -130,16 +131,46 @@ const socialProofImages = [
 
 const BUY_URL = "https://pay.wiapy.com/S047ajDjxY";
 
-const scrollToPricing = () => {
-  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" });
+const scrollToCompletePlan = () => {
+  document.getElementById("plano-completo")?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
 const goToCheckout = () => {
   window.location.href = BUY_URL;
 };
 
+
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [secondsLeft, setSecondsLeft] = useState(7 * 60);
+
+  useEffect(() => {
+    // Load Wistia scripts
+    const s1 = document.createElement("script");
+    s1.src = "https://fast.wistia.com/player.js";
+    s1.async = true;
+    document.body.appendChild(s1);
+    const s2 = document.createElement("script");
+    s2.src = "https://fast.wistia.com/embed/qhuvu6g5iv.js";
+    s2.async = true;
+    s2.type = "module";
+    document.body.appendChild(s2);
+    return () => {
+      s1.remove();
+      s2.remove();
+    };
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setSecondsLeft((s) => (s > 0 ? s - 1 : 0));
+    }, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
+  const ss = String(secondsLeft % 60).padStart(2, "0");
+
 
   return (
     <div className="min-h-screen">
@@ -158,9 +189,10 @@ function Index() {
               <span className="text-xs sm:text-sm font-black uppercase tracking-wide">Expira em:</span>
             </div>
             <div className="flex items-center gap-1 font-black text-xl sm:text-2xl">
-              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">06</div>
+              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">{mm}</div>
               <div className="text-gray-900 pb-1">:</div>
-              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">59</div>
+              <div className="bg-white text-[#DC2626] px-2 py-0.5 rounded shadow-sm leading-none">{ss}</div>
+
             </div>
           </div>
         </div>
@@ -181,40 +213,10 @@ function Index() {
                 👇 Veja esse vídeo! <ArrowDown className="ml-2" size={20} />
               </button>
               <div className="w-full max-w-[340px] mx-auto mb-8">
-                <div className="relative w-full aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-900 group">
-                  <div
-                    className="absolute inset-0 cursor-pointer"
-                    style={{ background: "linear-gradient(135deg, #002776, #000)" }}
-                  >
-                    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-4">
-                      <div className="relative mb-6">
-                        <div
-                          className="absolute inset-0 rounded-full animate-ping opacity-30"
-                          style={{ backgroundColor: "#FFDF00" }}
-                        />
-                        <div
-                          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center relative z-10 transition-transform group-hover:scale-110 duration-300"
-                          style={{
-                            backgroundColor: "#009C3B",
-                            boxShadow: "0 0 30px #FFDF00",
-                          }}
-                        >
-                          <Play className="text-white ml-2 fill-white" size={40} />
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-white font-black text-lg sm:text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-tight flex flex-col items-center gap-1">
-                          <span className="text-3xl mb-1">🏆</span>
-                          <span>
-                            Clique aqui para assistir
-                            <br />o vídeo!
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {/* @ts-expect-error wistia custom element */}
+                <wistia-player media-id="qhuvu6g5iv" aspect="0.5625"></wistia-player>
               </div>
+
             </div>
           </div>
         </section>
@@ -241,7 +243,7 @@ function Index() {
               <strong style={{ color: "#009C3B" }}>vibram e lembram</strong> — sem passar horas planejando do zero.
             </p>
             <button
-              onClick={scrollToPricing}
+              onClick={scrollToCompletePlan}
               className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none"
               style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
             >
@@ -373,7 +375,9 @@ function Index() {
 
               {/* Complete */}
               <div
+                id="plano-completo"
                 className="rounded-3xl border-2 shadow-2xl overflow-hidden relative transform scale-105 sm:scale-100 z-10"
+
                 style={{ backgroundColor: "#F0FDF4", borderColor: "#009C3B" }}
               >
                 <div
@@ -608,7 +612,7 @@ function Index() {
             </div>
             <div className="mt-14">
               <button
-                onClick={scrollToPricing}
+                onClick={scrollToCompletePlan}
                 className="w-full text-white font-black py-4 px-4 rounded-xl active:shadow-none active:translate-y-[4px] transition-all text-center uppercase tracking-wide flex flex-col items-center justify-center animate-pulse hover:animate-none shadow-xl"
                 style={{ backgroundColor: "#009C3B", boxShadow: "0 4px 0 #007A2E" }}
               >
