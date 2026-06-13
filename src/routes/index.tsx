@@ -127,6 +127,16 @@ const socialProofImages = [
   "https://i.imgur.com/rO65l3b.png",
 ];
 
+const BUY_URL = "https://pay.wiapy.com/S047ajDjxY";
+
+const scrollToPricing = () => {
+  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
+const goToCheckout = () => {
+  window.location.href = BUY_URL;
+};
+
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
