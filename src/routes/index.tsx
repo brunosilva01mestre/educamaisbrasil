@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowDown, Play, Check, CircleX, Gift, Star, User, ShieldCheck, ChevronDown } from "lucide-react";
+import rafaelaAsset from "@/assets/rafaela.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
