@@ -309,7 +309,7 @@ function Index() {
                   <img
                     src={b.image}
                     alt={b.title}
-                    className="w-full h-40 object-cover"
+                    className="w-full h-auto object-contain"
                     loading="lazy"
                   />
                   <div className="p-6 flex flex-col flex-1 text-center items-center">
