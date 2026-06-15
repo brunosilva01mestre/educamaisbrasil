@@ -306,13 +306,12 @@ function Index() {
                   className="bg-white rounded-2xl overflow-hidden flex flex-col h-full transition-all shadow-xl"
                   style={{ border: b.highlight ? "2px solid #FFD700" : "2px solid #E5E7EB" }}
                 >
-                  <div
-                    className="w-full h-40 flex items-center justify-center text-6xl"
-                    style={{ background: b.gradient }}
-                    aria-label={b.title}
-                  >
-                    <span className="drop-shadow-lg">{b.emoji}</span>
-                  </div>
+                  <img
+                    src={b.image}
+                    alt={b.title}
+                    className="w-full h-40 object-cover"
+                    loading="lazy"
+                  />
                   <div className="p-6 flex flex-col flex-1 text-center items-center">
                     <h3 className="font-black text-gray-900 text-lg leading-tight mb-3">{b.title}</h3>
                     <p className="text-sm text-gray-500 leading-relaxed mb-4">{b.desc}</p>
