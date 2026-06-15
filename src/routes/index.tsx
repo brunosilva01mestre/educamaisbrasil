@@ -2,6 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowDown, Check, CircleX, Gift, Star, User, ShieldCheck, ChevronDown } from "lucide-react";
 import rafaelaAsset from "@/assets/rafaela.png.asset.json";
+import bonus1Asset from "@/assets/bonus-1.png.asset.json";
+import bonus2Asset from "@/assets/bonus-2.png.asset.json";
+import bonus3Asset from "@/assets/bonus-3.png.asset.json";
+import bonus4Asset from "@/assets/bonus-4.png.asset.json";
+import bonus5Asset from "@/assets/bonus-5.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -24,37 +29,32 @@ export const Route = createFileRoute("/")({
 
 const bonuses = [
   {
-    emoji: "📖",
-    gradient: "linear-gradient(135deg, #FFD700 0%, #FFA500 100%)",
+    image: bonus1Asset.url,
     title: "Craques da Leitura — Álbum de Figurinhas dos Alunos",
     desc: "Cada aluno cola a própria figurinha em um álbum exclusivo da Copa e aprende sobre os países participantes enquanto brinca.",
     price: "R$47",
     highlight: true,
   },
   {
-    emoji: "📅",
-    gradient: "linear-gradient(135deg, #009C3B 0%, #00C853 100%)",
+    image: bonus2Asset.url,
     title: "Planejamento Copa — Cronograma de Aulas Temáticas",
     desc: "Calendário pronto para encaixar as dinâmicas da Copa no planejamento escolar do dia do jogo até o fim do semestre.",
     price: "R$27",
   },
   {
-    emoji: "🏆",
-    gradient: "linear-gradient(135deg, #002776 0%, #1E40AF 100%)",
+    image: bonus3Asset.url,
     title: "Craque da Turma — Sistema de Pontuação e Ranking",
     desc: "Painel de ranking estilo Copa — alunos ganham pontos ao participar das dinâmicas e competem de forma saudável.",
     price: "R$37",
   },
   {
-    emoji: "🎙️",
-    gradient: "linear-gradient(135deg, #DC2626 0%, #F59E0B 100%)",
+    image: bonus4Asset.url,
     title: "Narrador da Copa — Dinâmica de Oratória e Comunicação",
     desc: "Atividade onde os alunos narram lances históricos e apresentam a Copa como repórteres, desenvolvendo oratória e autoconfiança.",
     price: "R$47",
   },
   {
-    emoji: "🔄",
-    gradient: "linear-gradient(135deg, #7C3AED 0%, #EC4899 100%)",
+    image: bonus5Asset.url,
     title: "Atualizações Mensais — Novos Temas e Atividades Todo Mês",
     desc: "Todo mês você recebe um pacote novo com atividades temáticas prontas e materiais para usar direto em sala de aula.",
     price: "R$97/ano",
