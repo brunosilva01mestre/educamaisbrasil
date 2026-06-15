@@ -22,36 +22,39 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const ASSET_BASE = "https://pixel-perfect-clone-28570.lovable.app/__l5e/assets-v1";
-
 const bonuses = [
   {
-    img: `${ASSET_BASE}/ab9d2483-8b0f-42e0-88a5-a3b7baef5195/bonus-craques-da-leitura.png`,
+    emoji: "📖",
+    gradient: "linear-gradient(135deg, #FFD700 0%, #FFA500 100%)",
     title: "Craques da Leitura — Álbum de Figurinhas dos Alunos",
     desc: "Cada aluno cola a própria figurinha em um álbum exclusivo da Copa e aprende sobre os países participantes enquanto brinca.",
     price: "R$47",
     highlight: true,
   },
   {
-    img: `${ASSET_BASE}/b79b05b5-d801-4363-8294-949f1c78a5a2/bonus-planejamento-copa.png`,
+    emoji: "📅",
+    gradient: "linear-gradient(135deg, #009C3B 0%, #00C853 100%)",
     title: "Planejamento Copa — Cronograma de Aulas Temáticas",
     desc: "Calendário pronto para encaixar as dinâmicas da Copa no planejamento escolar do dia do jogo até o fim do semestre.",
     price: "R$27",
   },
   {
-    img: `${ASSET_BASE}/15b190f2-60e7-4642-9628-abea89624a61/bonus-craque-da-turma.png`,
+    emoji: "🏆",
+    gradient: "linear-gradient(135deg, #002776 0%, #1E40AF 100%)",
     title: "Craque da Turma — Sistema de Pontuação e Ranking",
     desc: "Painel de ranking estilo Copa — alunos ganham pontos ao participar das dinâmicas e competem de forma saudável.",
     price: "R$37",
   },
   {
-    img: `${ASSET_BASE}/12e7535f-42b8-4df0-ba42-918b21cfda72/bonus-narrador-da-copa.png`,
+    emoji: "🎙️",
+    gradient: "linear-gradient(135deg, #DC2626 0%, #F59E0B 100%)",
     title: "Narrador da Copa — Dinâmica de Oratória e Comunicação",
     desc: "Atividade onde os alunos narram lances históricos e apresentam a Copa como repórteres, desenvolvendo oratória e autoconfiança.",
     price: "R$47",
   },
   {
-    img: `${ASSET_BASE}/e9f221e0-c412-4310-9d57-e18420cdff6a/bonus-atualizacoes-mensais.png`,
+    emoji: "🔄",
+    gradient: "linear-gradient(135deg, #7C3AED 0%, #EC4899 100%)",
     title: "Atualizações Mensais — Novos Temas e Atividades Todo Mês",
     desc: "Todo mês você recebe um pacote novo com atividades temáticas prontas e materiais para usar direto em sala de aula.",
     price: "R$97/ano",
@@ -303,7 +306,13 @@ function Index() {
                   className="bg-white rounded-2xl overflow-hidden flex flex-col h-full transition-all shadow-xl"
                   style={{ border: b.highlight ? "2px solid #FFD700" : "2px solid #E5E7EB" }}
                 >
-                  <img src={b.img} alt={b.title} loading="lazy" className="w-full h-auto object-contain" />
+                  <div
+                    className="w-full h-40 flex items-center justify-center text-6xl"
+                    style={{ background: b.gradient }}
+                    aria-label={b.title}
+                  >
+                    <span className="drop-shadow-lg">{b.emoji}</span>
+                  </div>
                   <div className="p-6 flex flex-col flex-1 text-center items-center">
                     <h3 className="font-black text-gray-900 text-lg leading-tight mb-3">{b.title}</h3>
                     <p className="text-sm text-gray-500 leading-relaxed mb-4">{b.desc}</p>
